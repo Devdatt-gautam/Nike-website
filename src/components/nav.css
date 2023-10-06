@@ -1,0 +1,8 @@
+@media not all and (min-width: 1024px) {
+  .On {
+    display: flex;
+  }
+  .Off {
+    display: none;
+  }
+}

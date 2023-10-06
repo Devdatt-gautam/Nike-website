@@ -1,9 +1,13 @@
 import { offer } from "../assets/images";
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
+import { motion } from "framer-motion";
 const SpecialOffer = () => {
   return (
-    <div className="flex  items-center max-xl:flex-col-reverse gap:10 max-container justify-center">
+    <motion.div
+      id="offer"
+      className="flex   items-center max-xl:flex-col-reverse gap:10 max-container justify-center"
+    >
       <div className="flex-1 max-xl:mt-4">
         <img
           src={offer}
@@ -13,7 +17,13 @@ const SpecialOffer = () => {
           className="object-contain w-full"
         />
       </div>
-      <div className="flex flex-1 flex-col">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.75 }}
+        className="flex flex-1 flex-col "
+      >
         <h2 className="font-palanquin text-4xl capitalize lg:max-w-lg font-bold">
           <span className="text-coral-red">Special </span> Offer
         </h2>
@@ -28,16 +38,17 @@ const SpecialOffer = () => {
           nothing short of exceptional
         </p>
         <div className="mt-11 flex flex-wrap gap-4">
-          <Button label="Shop now" iconURL={arrowRight} />
+          <Button label="Shop now" iconURL={arrowRight} link="#products" />
           <Button
             label="Learn more"
             backgroundColor="bg-white"
             borderColor="border-slate-gray"
             textColor="text-slate-gray"
+            link="#contact-us"
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
