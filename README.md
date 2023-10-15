@@ -4,7 +4,7 @@ This is a Nike inspired frontend website made with React.js and Tailwind CSS.
 
 ## Live website link
 
-https://devdatt-gautam.github.io/Nike-website/
+./public/ss.png
 
 ## Features
 
